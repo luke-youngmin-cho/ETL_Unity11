@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\SubscribeExample\\SubscribeExample.csproj": {}
+    "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SubscribeExample\\SubscribeExample.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\SubscribeExample\\SubscribeExample.csproj": {
+    "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SubscribeExample\\SubscribeExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\SubscribeExample\\SubscribeExample.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SubscribeExample\\SubscribeExample.csproj",
         "projectName": "SubscribeExample",
-        "projectPath": "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\SubscribeExample\\SubscribeExample.csproj",
+        "projectPath": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SubscribeExample\\SubscribeExample.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\SubscribeExample\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SubscribeExample\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

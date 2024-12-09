@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\Enumeration\\Enumeration.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\Enumeration\\Enumeration.csproj",
       "projectName": "Enumeration",
-      "projectPath": "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\Enumeration\\Enumeration.csproj",
+      "projectPath": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\Enumeration\\Enumeration.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\Enumeration\\obj\\",
+      "outputPath": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\Enumeration\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

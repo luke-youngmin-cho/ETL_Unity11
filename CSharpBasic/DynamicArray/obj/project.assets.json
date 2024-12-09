@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\DynamicArray\\DynamicArray.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\DynamicArray.csproj",
       "projectName": "DynamicArray",
-      "projectPath": "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\DynamicArray\\DynamicArray.csproj",
+      "projectPath": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\DynamicArray.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Documents\\GitHub\\CSharpBasic\\DynamicArray\\obj\\",
+      "outputPath": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
