@@ -1,4 +1,6 @@
-﻿namespace DynamicArray
+﻿using System.Reflection;
+
+namespace DynamicArray
 {
     internal class Program
     {
@@ -17,7 +19,7 @@
             // C# 에서 '값타입' 은 구조체 기반이며 간단하게 object 타입으로 캐스팅이 안됨. 
             // 그래서 '값타입'도 object 타입으로 참조해서 사용할 수 있도록, 
             // 새 object 객체를 동적할당하고 원본값의 타입객체(System.Type)참조와 값을 가지고있게 함.
-
+            
             // unboxing 이 뭔가 ?
             // boxing 된 object 객체에서 원본 값을 읽어오는 과정
 
@@ -65,8 +67,13 @@
             MyLinkedList<char> myLinkedListOfChar = new MyLinkedList<char>();
             myLinkedListOfChar.AddFirst('a');
             myLinkedListOfChar.AddLast('b');
-            Node<char> node = myLinkedListOfChar.FindLast(x => x == 'a');
+            MyLinkedListNode<char> node = myLinkedListOfChar.FindLast(x => x == 'a');
             myLinkedListOfChar.AddAfter(node, 'c');
+
+            foreach (var item in myLinkedListOfChar)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
