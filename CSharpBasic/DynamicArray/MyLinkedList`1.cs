@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DynamicArray
 {
@@ -21,7 +23,7 @@ namespace DynamicArray
         internal Node<T> Prev;
     }
 
-    internal class MyLinkedList<T>
+    internal class MyLinkedList<T> : IEnumerable<T>
     {
         internal Node<T> First => _first;
         internal Node<T> Last => _last;
@@ -98,12 +100,38 @@ namespace DynamicArray
 
         internal void AddFirst(T value)
         {
-            AddBefore(_first, value);
+            Node<T> newNode = new Node<T>(this, value);
+
+            if (_first != null)
+            {
+                _first.Prev = newNode;
+                newNode.Next = _first;
+            }
+            else
+            {
+                _last = newNode;
+            }
+            
+            _first = newNode;
+            _size++;
         }
 
         internal void AddLast(T value)
         {
-            AddAfter(_last, value);
+            Node<T> newNode = new Node<T>(this, value);
+
+            if (_last != null)
+            {
+                _last.Next = newNode;
+                newNode.Prev = _last;
+            }
+            else
+            {
+                _first = newNode;
+            }
+
+            _last = newNode;
+            _size++;
         }
 
         /// <summary>
@@ -191,6 +219,67 @@ namespace DynamicArray
         internal bool RemoveLast(T value)
         {
             return Remove(FindLast(x => x.Equals(value)));
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return new Enumerator(this);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return new Enumerator(this);
+        }
+
+        public struct Enumerator : IEnumerator<T>
+        {
+            public Enumerator(MyLinkedList<T> list)
+            {
+                _list = list;
+            }
+
+            public T Current
+            {
+                get
+                {
+                    if (_currentNode == null)
+                        throw new Exception("Invalid index");
+
+                    return _currentNode.Value;
+                }
+            }
+
+            object IEnumerator.Current => Current;
+
+            MyLinkedList<T> _list;
+            Node<T> _currentNode;
+
+            public void Dispose()
+            {
+            }
+
+            public bool MoveNext()
+            {
+                if (_currentNode == null)
+                {
+                    _currentNode = _list.First;
+                    return true;
+                }
+                else if (_currentNode.Next != null)
+                {
+                    _currentNode = _currentNode.Next;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            public void Reset()
+            {
+                _currentNode = null;
+            }
         }
     }
 }

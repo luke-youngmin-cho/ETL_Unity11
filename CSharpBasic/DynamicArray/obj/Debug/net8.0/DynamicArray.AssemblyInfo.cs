@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DynamicArray")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8e9bcbc8095030185e2ce24dc129060fcf39833")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aedd4e6b394a965bc1bc9179f52e29eaeb62f8f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("DynamicArray")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DynamicArray")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
