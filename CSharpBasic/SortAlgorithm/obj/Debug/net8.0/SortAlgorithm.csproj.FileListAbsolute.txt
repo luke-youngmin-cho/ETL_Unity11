@@ -1,0 +1,15 @@
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\bin\Debug\net8.0\SortAlgorithm.exe
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\bin\Debug\net8.0\SortAlgorithm.deps.json
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\bin\Debug\net8.0\SortAlgorithm.runtimeconfig.json
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\bin\Debug\net8.0\SortAlgorithm.dll
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\bin\Debug\net8.0\SortAlgorithm.pdb
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\obj\Debug\net8.0\SortAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\obj\Debug\net8.0\SortAlgorithm.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\obj\Debug\net8.0\SortAlgorithm.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\obj\Debug\net8.0\SortAlgorithm.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\obj\Debug\net8.0\SortAlgorithm.sourcelink.json
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\obj\Debug\net8.0\SortAlgorithm.dll
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\obj\Debug\net8.0\refint\SortAlgorithm.dll
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\obj\Debug\net8.0\SortAlgorithm.pdb
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\obj\Debug\net8.0\SortAlgorithm.genruntimeconfig.cache
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SortAlgorithm\obj\Debug\net8.0\ref\SortAlgorithm.dll
