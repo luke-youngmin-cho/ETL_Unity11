@@ -9,7 +9,7 @@ namespace Practices.UGUI_Management.UI
         {
             base.Start();
 
-            //playerInputActions.UI.Click.performed += OnClick;
+            playerInputActions.UI.Click.performed += OnClick;
         }
 
         private void OnClick(InputAction.CallbackContext context)

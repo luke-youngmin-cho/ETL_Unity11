@@ -1,3 +1,4 @@
+using Practices.UGUI_Management.Utilities;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ using UnityEngine.UI;
 namespace Practices.UGUI_Management.UI
 {
     [RequireComponent(typeof(Canvas))]
-    public abstract class UI_Base : MonoBehaviour
+    public abstract class UI_Base : ComponentResolvingBehaviour
     {
         public int sortingOrder
         {
@@ -40,8 +41,10 @@ namespace Practices.UGUI_Management.UI
         public event Action onHide;
 
 
-        protected virtual void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             _canvas = GetComponent<Canvas>();
             _graphicRaycaster = GetComponent<GraphicRaycaster>();
             _eventSystem = EventSystem.current;

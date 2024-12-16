@@ -1,3 +1,4 @@
+using Practices.UGUI_Management.Utilities;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,8 +8,8 @@ namespace Practices.UGUI_Management.UI
 {
     public class UI_ConfirmWindow : UI_Popup
     {
-        [SerializeField] TMP_Text _message;
-        [SerializeField] Button _confirm;
+        [Resolve] TMP_Text _message;
+        [Resolve] Button _confirm;
 
 
         public void Show(string message, UnityAction onConfirmed = null)

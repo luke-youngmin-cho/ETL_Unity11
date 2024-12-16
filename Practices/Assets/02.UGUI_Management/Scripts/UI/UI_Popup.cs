@@ -3,12 +3,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using Practices.UGUI_Management.Utilities;
 
 namespace Practices.UGUI_Management.UI
 {
     public class UI_Popup : UI_Base
     {
-        [SerializeField] Image _panel;
+        [Resolve] Image _panel;
         private bool _onDragging;
 
 
