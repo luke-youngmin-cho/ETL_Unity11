@@ -1,12 +1,17 @@
 using System;
+using System.Reflection;
 
 namespace Practices.NPC_Example.AISystems.BT
 {
     public class Decorator : Node, IParentOfChild
     {
-        public Decorator(BehaviourTree tree, Func<bool> condition) : base(tree)
+        public Decorator(BehaviourTree tree, string propertyName) : base(tree)
         {
-            _condition = condition;
+            PropertyInfo propertyInfo = blackboard.GetType().GetProperty(propertyName);
+            _condition = () =>
+            {
+                return (bool)propertyInfo.GetValue(tree.blackboard);
+            };
         }
 
 
@@ -20,10 +25,19 @@ namespace Practices.NPC_Example.AISystems.BT
         {
             if (_condition.Invoke())
             {
-                return child.Invoke();
+                tree.stack.Push(child);
+                return Result.Success;
             }
 
             return Result.Failure;
+        }
+
+        public void Attach(Node child)
+        {
+            if (this.child != null)
+                throw new InvalidOperationException("Child already exists.");
+
+            this.child = child;
         }
     }
 }

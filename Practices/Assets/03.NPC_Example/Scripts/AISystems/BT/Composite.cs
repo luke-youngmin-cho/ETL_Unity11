@@ -14,5 +14,10 @@ namespace Practices.NPC_Example.AISystems.BT
 
 
         protected int currentChildIndex;
+
+        public void Attach(Node child)
+        {
+            children.Add(child);
+        }
     }
 }

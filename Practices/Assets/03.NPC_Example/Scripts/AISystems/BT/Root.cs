@@ -1,3 +1,5 @@
+using System;
+
 namespace Practices.NPC_Example.AISystems.BT
 {
     public class Root : Node, IParentOfChild
@@ -9,10 +11,19 @@ namespace Practices.NPC_Example.AISystems.BT
 
         public Node child { get; set; }
 
-
+        
         public override Result Invoke()
         {
-            return child.Invoke();
+            tree.stack.Push(child);
+            return Result.Success;
+        }
+
+        public void Attach(Node child)
+        {
+            if (this.child != null)
+                throw new InvalidOperationException("Child already exists.");
+
+            this.child = child;
         }
     }
 }
