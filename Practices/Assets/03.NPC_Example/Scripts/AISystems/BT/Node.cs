@@ -21,5 +21,7 @@ namespace Practices.NPC_Example.AISystems.BT
         /// </summary>
         /// <returns> 노드 실행 결과 </returns>
         public abstract Result Invoke();
+
+        public virtual void OnDrawGizmos() { }
     }
 }

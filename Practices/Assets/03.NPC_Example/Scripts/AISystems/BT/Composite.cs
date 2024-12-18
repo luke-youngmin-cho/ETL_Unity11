@@ -19,5 +19,12 @@ namespace Practices.NPC_Example.AISystems.BT
         {
             children.Add(child);
         }
+
+        public override void OnDrawGizmos()
+        {
+            base.OnDrawGizmos();
+
+            children[currentChildIndex].OnDrawGizmos();
+        }
     }
 }

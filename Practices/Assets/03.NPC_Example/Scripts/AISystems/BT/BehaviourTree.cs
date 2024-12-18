@@ -43,6 +43,13 @@ namespace Practices.NPC_Example.AISystems.BT
             _isRunning = false;
         }
 
+        private void OnDrawGizmos()
+        {
+            if (stack.Count > 0)
+                stack.Peek().OnDrawGizmos();
+        }
+
+
         #region Builder
 
         Node _current;
@@ -95,6 +102,20 @@ namespace Practices.NPC_Example.AISystems.BT
         public BehaviourTree Seek(float angle, float radius, float height, float maxDistance, LayerMask targetMask, LayerMask obstacleMask)
         {
             Node node = new Seek(this, angle, radius, height, maxDistance, targetMask, obstacleMask);
+            Attach(_current, node);
+            return this;
+        }
+
+        public BehaviourTree Patrol(float angle, float radius, float height, float maxDistance, LayerMask targetMask, LayerMask obstacleMask, float rangeRadius, LayerMask groundMask)
+        {
+            Node node = new Patrol(this, angle, radius, height, maxDistance, targetMask, obstacleMask, rangeRadius, groundMask);
+            Attach(_current, node);
+            return this;
+        }
+
+        public BehaviourTree Monitor(float angle, float radius, float height, float maxDistance, LayerMask targetMask, LayerMask obstacleMask, float monitoringTimeMin, float monitoringTimeMax)
+        {
+            Node node = new Monitor(this, angle, radius, height, maxDistance, targetMask, obstacleMask, monitoringTimeMin, monitoringTimeMax);
             Attach(_current, node);
             return this;
         }

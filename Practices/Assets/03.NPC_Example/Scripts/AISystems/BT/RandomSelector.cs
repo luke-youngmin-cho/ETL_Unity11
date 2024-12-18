@@ -1,10 +1,17 @@
+using Practices.NPC_Example.Utilities;
+using System;
 namespace Practices.NPC_Example.AISystems.BT
 {
     public class RandomSelector : Composite
     {
         public RandomSelector(BehaviourTree tree) : base(tree)
         {
+            _random = new Random();
         }
+
+
+        Random _random;
+
 
         public override Result Invoke()
         {
@@ -19,6 +26,7 @@ namespace Practices.NPC_Example.AISystems.BT
                     case Result.Success:
                         {
                             currentChildIndex = 0;
+                            _random.Shuffle<Node>(children);
                             return result;
                         }
                     case Result.Failure:
@@ -36,6 +44,7 @@ namespace Practices.NPC_Example.AISystems.BT
             }
 
             currentChildIndex = 0;
+            _random.Shuffle<Node>(children);
             return result;
         }
     }
