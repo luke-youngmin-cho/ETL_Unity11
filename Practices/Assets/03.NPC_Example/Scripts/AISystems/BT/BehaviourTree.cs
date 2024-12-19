@@ -120,6 +120,13 @@ namespace Practices.NPC_Example.AISystems.BT
             return this;
         }
 
+        public BehaviourTree Attack()
+        {
+            Node node = new Attack(this);
+            Attach(_current, node);
+            return this;
+        }
+
         public BehaviourTree CompleteCurrentComposite()
         {
             if (_compositeStack.Count > 0)

@@ -25,6 +25,7 @@ namespace Practices.NPC_Example.AISystems.BT
                 // 목표 추적 완료 (목표에 도착함)
                 if (distance <= blackboard.agent.stoppingDistance)
                 {
+                    blackboard.agent.ResetPath();
                     return Result.Success;
                 }
                 // 목표 추적중

@@ -1,3 +1,4 @@
+using Practices.NPC_Example.Utilities;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -35,7 +36,7 @@ namespace Practices.NPC_Example.AISystems.BT
                 return Result.Success;
             }
 
-            if (blackboard.agent.hasPath)
+            if (blackboard.agent.IsReachedToTarget() == false)
             {
                 if (TryDetectTarget(out Transform target))
                 {
