@@ -331,6 +331,9 @@
         <mxCell id="4vbNxgcKXTkhY_OgfdEm-24" value="&lt;div&gt;Random&lt;/div&gt;Selector" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-10" y="640" width="80" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="INxQvICivC9Ku7e3EAnR-0" value="Monitor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="400" y="820" width="50" height="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

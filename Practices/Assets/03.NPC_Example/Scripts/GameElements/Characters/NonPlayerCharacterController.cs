@@ -1,26 +1,11 @@
 using Practices.NPC_Example.AISystems.BT;
-using Practices.NPC_Example.FSM;
-using Practices.NPC_Example.GameElements.EffectSystems.DamageEffects;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Practices.NPC_Example.GameElements.Characters
 {
-    public enum State
-    {
-        Move,
-        InAir,
-        Attack = 10
-    }
-
     [RequireComponent(typeof(BehaviourTree))]
-    public class NonPlayerCharacterController : MonoBehaviour, ICharacterController
+    public class NonPlayerCharacterController : CharacterControllerBase, ICharacterController
     {
-        public State currentState { get; private set; }
-
-        public bool isTransitioning => _animator.GetBool(IS_DIRTY_HASH);
-
-
         BehaviourTree _behaviourTree;
 
         [Header("AI Seek")]
@@ -39,32 +24,20 @@ namespace Practices.NPC_Example.GameElements.Characters
         [SerializeField] float _monitoringTimeMin = 1f;
         [SerializeField] float _monitoringTimeMax = 3f;
 
-        DamageEffectFactory _damageEffectFactory;
+        
 
-        // Animator
-        Animator _animator;
-        readonly int STATE_HASH = Animator.StringToHash("State");
-        readonly int IS_DIRTY_HASH = Animator.StringToHash("IsDirty");
-        readonly int SPEED_HASH = Animator.StringToHash("Speed");
-
-        // Navigation
-        NavMeshAgent _agent;
-
-        private void Awake()
+        protected override void Awake()
         {
-            _damageEffectFactory = new DamageEffectFactory();
-            _animator = GetComponent<Animator>();
-            _agent = GetComponent<NavMeshAgent>();
-            StateMachineBehaviourBase[] behaviours = _animator.GetBehaviours<StateMachineBehaviourBase>();
+            base.Awake();
 
-            for (int i = 0; i < behaviours.Length; i++)
-            {
-                behaviours[i].onStateEntered += state => currentState = state;
-            }
+            inputCommand = new NonPlayerInputCommand();
         }
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
+
+            inputCommand.Enable();
             // Before (하드 코딩)
             //_behaviourTree = GetComponent<BehaviourTree>();
             //_behaviourTree.root = new Root(_behaviourTree);
@@ -83,26 +56,22 @@ namespace Practices.NPC_Example.GameElements.Characters
                     .CompleteCurrentComposite()
                     .RandomSelector()
                         .Patrol(_seekAngle, _seekRadius, _seekHeight, _seekMaxDistance, _seekTargetMask, _seekObstacleMask, _patrolRange, _patrolAreaMask)
-                        .Monitor(_seekAngle, _seekRadius, _seekHeight, _seekMaxDistance, _seekTargetMask, _seekObstacleMask, _monitoringTimeMin, _monitoringTimeMax);
+                        .Monitor(_seekAngle, _seekRadius, _seekHeight, _seekMaxDistance, _seekTargetMask, _seekObstacleMask, _monitoringTimeMin, _monitoringTimeMax)
+                        .Jump();
         }
 
-        private void Update()
+        public override void Damage(GameObject damager, float damageAmount)
         {
-            float speedNormalized = _agent.velocity.magnitude / _agent.speed;
-            _animator.SetFloat(SPEED_HASH, speedNormalized);
-        }
+            base.Damage(damager, damageAmount);
 
-        public void Damage(GameObject damager, float damageAmount)
-        {
-            // todo -> decrease hp
             _behaviourTree.blackboard.target = damager.transform;
-            _damageEffectFactory.Create("DamageFont2", transform.position + Vector3.up * 2, damageAmount);
         }
 
-        public void ChangeState(State newState)
+        public override void PauseOperation(bool pause)
         {
-            _animator.SetInteger(STATE_HASH, (int)newState);
-            _animator.SetBool(IS_DIRTY_HASH, true);
+            base.PauseOperation(pause);
+
+            agent.enabled = pause == false;
         }
     }
 }

@@ -1,5 +1,12 @@
 namespace Practices.NPC_Example.GameElements.Characters
 {
+    public enum State
+    {
+        Move,
+        InAir,
+        Attack = 10
+    }
+
     public interface ICharacterController
     {
         /// <summary>
@@ -7,6 +14,7 @@ namespace Practices.NPC_Example.GameElements.Characters
         /// </summary>
         State currentState { get; }
         bool isTransitioning { get; }
+        IInputCommand inputCommand { get; set; }
 
         void ChangeState(State newState);
     }

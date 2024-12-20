@@ -126,6 +126,12 @@ namespace Practices.NPC_Example.AISystems.BT
             Attach(_current, node);
             return this;
         }
+        public BehaviourTree Jump()
+        {
+            Node node = new Jump(this);
+            Attach(_current, node);
+            return this;
+        }
 
         public BehaviourTree CompleteCurrentComposite()
         {
