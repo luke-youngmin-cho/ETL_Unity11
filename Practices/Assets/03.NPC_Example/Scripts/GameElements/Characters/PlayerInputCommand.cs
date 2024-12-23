@@ -11,10 +11,16 @@ namespace Practices.NPC_Example.GameElements.Characters
             _doAttackTrigger = false;
             _inputActions = new InputActions();
             _inputActions.Player.Jump.started += context => doJumpTrigger = true;
+
             _inputActions.Player.Move.performed += context =>
             {
                 Vector2 value = context.ReadValue<Vector2>();
                 moveDirection = new Vector3(value.x, 0f, value.y);
+            };
+
+            _inputActions.Player.Move.canceled += context =>
+            {
+                moveDirection = Vector3.zero;
             };
         }
 

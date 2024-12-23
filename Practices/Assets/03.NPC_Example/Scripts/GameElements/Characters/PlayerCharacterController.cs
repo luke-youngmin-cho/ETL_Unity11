@@ -1,3 +1,4 @@
+using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -49,19 +50,21 @@ namespace Practices.NPC_Example.GameElements.Characters
         }
 
         private Mode _mode;
+        private bool _isGrounded;
+        
 
 
         protected override void Awake()
         {
             base.Awake();
-
+            
             inputCommand = new PlayerInputCommand();
         }
 
         protected override void Start()
         {
             base.Start();
-
+                        
             mode = Mode.Manual;
             inputCommand.Enable();
         }
@@ -108,13 +111,29 @@ namespace Practices.NPC_Example.GameElements.Characters
 
             Vector3 expectedPosition = transform.position + velocity * Time.fixedDeltaTime;
 
-            if (NavMesh.SamplePosition(expectedPosition, out NavMeshHit navMeshHit, NAV_MESH_POSITION_TOLERANCE, NavMesh.AllAreas))
+            if (CheckGround(expectedPosition, out Vector3 groundPoint, out Vector3 groundNormal))
             {
-                expectedPosition = navMeshHit.position;
+                if (CheckSlope(expectedPosition, groundPoint, groundNormal, out Vector3 slopePoint))
+                {
+                    expectedPosition = slopePoint;
+                }
+                else if (CheckStep(expectedPosition, out Vector3 stepPoint))
+                {
+                    expectedPosition = stepPoint;
+                }
+                else
+                {
+                    return;
+                }
             }
             else
             {
-                return;
+                expectedPosition += Vector3.down * speedByGravity;
+
+                if (CheckGroundBetween(transform.position, expectedPosition, out groundPoint))
+                {
+                    expectedPosition = groundPoint;
+                }
             }
 
             transform.position = expectedPosition;
