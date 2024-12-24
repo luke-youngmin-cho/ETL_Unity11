@@ -1,0 +1,15 @@
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\bin\Debug\net8.0\MultithreadPractice.exe
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\bin\Debug\net8.0\MultithreadPractice.deps.json
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\bin\Debug\net8.0\MultithreadPractice.runtimeconfig.json
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\bin\Debug\net8.0\MultithreadPractice.dll
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\bin\Debug\net8.0\MultithreadPractice.pdb
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\obj\Debug\net8.0\MultithreadPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\obj\Debug\net8.0\MultithreadPractice.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\obj\Debug\net8.0\MultithreadPractice.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\obj\Debug\net8.0\MultithreadPractice.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\obj\Debug\net8.0\MultithreadPractice.sourcelink.json
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\obj\Debug\net8.0\MultithreadPractice.dll
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\obj\Debug\net8.0\refint\MultithreadPractice.dll
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\obj\Debug\net8.0\MultithreadPractice.pdb
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\obj\Debug\net8.0\MultithreadPractice.genruntimeconfig.cache
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\MultithreadPractice\obj\Debug\net8.0\ref\MultithreadPractice.dll
