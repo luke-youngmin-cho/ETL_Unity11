@@ -1,0 +1,15 @@
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\obj\Debug\net8.0\SynchronizationPractices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\obj\Debug\net8.0\SynchronizationPractices.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\obj\Debug\net8.0\SynchronizationPractices.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\obj\Debug\net8.0\SynchronizationPractices.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\obj\Debug\net8.0\SynchronizationPractices.sourcelink.json
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\bin\Debug\net8.0\SynchronizationPractices.exe
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\bin\Debug\net8.0\SynchronizationPractices.deps.json
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\bin\Debug\net8.0\SynchronizationPractices.runtimeconfig.json
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\bin\Debug\net8.0\SynchronizationPractices.dll
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\bin\Debug\net8.0\SynchronizationPractices.pdb
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\obj\Debug\net8.0\SynchronizationPractices.dll
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\obj\Debug\net8.0\refint\SynchronizationPractices.dll
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\obj\Debug\net8.0\SynchronizationPractices.pdb
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\obj\Debug\net8.0\SynchronizationPractices.genruntimeconfig.cache
+C:\Users\user\Documents\GitHub\ETL_Unity11\CSharpBasic\SynchronizationPractices\obj\Debug\net8.0\ref\SynchronizationPractices.dll

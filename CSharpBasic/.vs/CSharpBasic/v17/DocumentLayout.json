@@ -3,16 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\synchronizationpractices\\singleton\u00601.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|solutionrelative:synchronizationpractices\\singleton\u00601.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\synchronizationpractices\\lazysingleton\u00601.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|solutionrelative:synchronizationpractices\\lazysingleton\u00601.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\synchronizationpractices\\countingtesterwithsemaphore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|solutionrelative:synchronizationpractices\\countingtesterwithsemaphore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\synchronizationpractices\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|solutionrelative:synchronizationpractices\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\synchronizationpractices\\countingtesterwithmutex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|solutionrelative:synchronizationpractices\\countingtesterwithmutex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\synchronizationpractices\\countingtesterwithlock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|solutionrelative:synchronizationpractices\\countingtesterwithlock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\synchronizationpractices\\countingtesterwithspinlock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|solutionrelative:synchronizationpractices\\countingtesterwithspinlock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\synchronizationpractices\\countingtesterwithinterlock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|solutionrelative:synchronizationpractices\\countingtesterwithinterlock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\synchronizationpractices\\countingtester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F37DD00B-7505-4E26-BBCD-1963AD4DFBE5}|SynchronizationPractices\\SynchronizationPractices.csproj|solutionrelative:synchronizationpractices\\countingtester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFABE0E7-4AC9-4C62-A30A-1C4685637F44}|MultithreadPractice\\MultithreadPractice.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\multithreadpractice\\frontlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFABE0E7-4AC9-4C62-A30A-1C4685637F44}|MultithreadPractice\\MultithreadPractice.csproj|solutionrelative:multithreadpractice\\frontlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BFABE0E7-4AC9-4C62-A30A-1C4685637F44}|MultithreadPractice\\MultithreadPractice.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\multithreadpractice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFABE0E7-4AC9-4C62-A30A-1C4685637F44}|MultithreadPractice\\MultithreadPractice.csproj|solutionrelative:multithreadpractice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D5B0D99-0DC3-4A86-97B8-B510CEB5A29A}|DynamicArray\\Collections.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\dynamicarray\\mydynamicarray\u00601.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D5B0D99-0DC3-4A86-97B8-B510CEB5A29A}|DynamicArray\\Collections.csproj|solutionrelative:dynamicarray\\mydynamicarray\u00601.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFABE0E7-4AC9-4C62-A30A-1C4685637F44}|MultithreadPractice\\MultithreadPractice.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\multithreadpractice\\frontlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFABE0E7-4AC9-4C62-A30A-1C4685637F44}|MultithreadPractice\\MultithreadPractice.csproj|solutionrelative:multithreadpractice\\frontlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFABE0E7-4AC9-4C62-A30A-1C4685637F44}|MultithreadPractice\\MultithreadPractice.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\csharpbasic\\multithreadpractice\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -113,11 +149,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 191,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "MyDynamicArray\u00601.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\MyDynamicArray\u00601.cs",
               "RelativeDocumentMoniker": "DynamicArray\\MyDynamicArray\u00601.cs",
@@ -126,12 +162,128 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAKsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T04:32:47.313Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LazySingleton\u00601.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\LazySingleton\u00601.cs",
+              "RelativeDocumentMoniker": "SynchronizationPractices\\LazySingleton\u00601.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\LazySingleton\u00601.cs",
+              "RelativeToolTip": "SynchronizationPractices\\LazySingleton\u00601.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T05:49:11.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Singleton\u00601.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\Singleton\u00601.cs",
+              "RelativeDocumentMoniker": "SynchronizationPractices\\Singleton\u00601.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\Singleton\u00601.cs",
+              "RelativeToolTip": "SynchronizationPractices\\Singleton\u00601.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T05:43:52.496Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "CountingTesterWithSemaphore.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTesterWithSemaphore.cs",
+              "RelativeDocumentMoniker": "SynchronizationPractices\\CountingTesterWithSemaphore.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTesterWithSemaphore.cs",
+              "RelativeToolTip": "SynchronizationPractices\\CountingTesterWithSemaphore.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T05:36:25.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CountingTesterWithMutex.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTesterWithMutex.cs",
+              "RelativeDocumentMoniker": "SynchronizationPractices\\CountingTesterWithMutex.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTesterWithMutex.cs",
+              "RelativeToolTip": "SynchronizationPractices\\CountingTesterWithMutex.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T05:24:04.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CountingTesterWithLock.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTesterWithLock.cs",
+              "RelativeDocumentMoniker": "SynchronizationPractices\\CountingTesterWithLock.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTesterWithLock.cs",
+              "RelativeToolTip": "SynchronizationPractices\\CountingTesterWithLock.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T05:16:06.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CountingTesterWithSpinLock.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTesterWithSpinLock.cs",
+              "RelativeDocumentMoniker": "SynchronizationPractices\\CountingTesterWithSpinLock.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTesterWithSpinLock.cs",
+              "RelativeToolTip": "SynchronizationPractices\\CountingTesterWithSpinLock.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T05:05:18.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CountingTesterWithInterlock.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTesterWithInterlock.cs",
+              "RelativeDocumentMoniker": "SynchronizationPractices\\CountingTesterWithInterlock.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTesterWithInterlock.cs",
+              "RelativeToolTip": "SynchronizationPractices\\CountingTesterWithInterlock.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T04:42:20.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CountingTester.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTester.cs",
+              "RelativeDocumentMoniker": "SynchronizationPractices\\CountingTester.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\CountingTester.cs",
+              "RelativeToolTip": "SynchronizationPractices\\CountingTester.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T04:09:09.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\Program.cs",
+              "RelativeDocumentMoniker": "SynchronizationPractices\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SynchronizationPractices\\Program.cs",
+              "RelativeToolTip": "SynchronizationPractices\\Program.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAgwB8AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T04:08:05.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "FrontListener.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\MultithreadPractice\\FrontListener.cs",
               "RelativeDocumentMoniker": "MultithreadPractice\\FrontListener.cs",
@@ -139,12 +291,11 @@
               "RelativeToolTip": "MultithreadPractice\\FrontListener.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T07:52:27.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T07:52:27.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "SatisfactionType.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\MultithreadPractice\\SatisfactionType.cs",
               "RelativeDocumentMoniker": "MultithreadPractice\\SatisfactionType.cs",
@@ -152,12 +303,11 @@
               "RelativeToolTip": "MultithreadPractice\\SatisfactionType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T01:28:37.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T01:28:37.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "Beverage.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\MultithreadPractice\\Beverage.cs",
               "RelativeDocumentMoniker": "MultithreadPractice\\Beverage.cs",
@@ -165,12 +315,11 @@
               "RelativeToolTip": "MultithreadPractice\\Beverage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T01:16:50.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T01:16:50.31Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "BeverageType.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\MultithreadPractice\\BeverageType.cs",
               "RelativeDocumentMoniker": "MultithreadPractice\\BeverageType.cs",
@@ -178,12 +327,11 @@
               "RelativeToolTip": "MultithreadPractice\\BeverageType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T00:47:11.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T00:47:11.17Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "Worker.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\MultithreadPractice\\Worker.cs",
               "RelativeDocumentMoniker": "MultithreadPractice\\Worker.cs",
@@ -191,12 +339,11 @@
               "RelativeToolTip": "MultithreadPractice\\Worker.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T00:29:21.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T00:29:21.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "Barista.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\MultithreadPractice\\Barista.cs",
               "RelativeDocumentMoniker": "MultithreadPractice\\Barista.cs",
@@ -204,12 +351,11 @@
               "RelativeToolTip": "MultithreadPractice\\Barista.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T00:28:38.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T00:28:38.837Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "Server.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\MultithreadPractice\\Server.cs",
               "RelativeDocumentMoniker": "MultithreadPractice\\Server.cs",
@@ -217,25 +363,23 @@
               "RelativeToolTip": "MultithreadPractice\\Server.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAIBBwBwAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T00:28:33.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T00:28:33.04Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\MultithreadPractice\\Program.cs",
               "RelativeDocumentMoniker": "MultithreadPractice\\Program.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\MultithreadPractice\\Program.cs",
               "RelativeToolTip": "MultithreadPractice\\Program.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAWwDwAAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T00:26:58.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T00:26:58.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "ArrayExtensions.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SortAlgorithm\\ArrayExtensions.cs",
               "RelativeDocumentMoniker": "SortAlgorithm\\ArrayExtensions.cs",
@@ -247,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SortAlgorithm\\Program.cs",
               "RelativeDocumentMoniker": "SortAlgorithm\\Program.cs",
@@ -255,12 +399,11 @@
               "RelativeToolTip": "SortAlgorithm\\Program.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAgwBMAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T00:38:53.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T00:38:53.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "SubscribeExample.csproj",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SubscribeExample\\SubscribeExample.csproj",
               "RelativeDocumentMoniker": "SubscribeExample\\SubscribeExample.csproj",
@@ -272,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "MyHashtable\u00602.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\MyHashtable\u00602.cs",
               "RelativeDocumentMoniker": "DynamicArray\\MyHashtable\u00602.cs",
@@ -284,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "MyPriorityQueue.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\MyPriorityQueue.cs",
               "RelativeDocumentMoniker": "DynamicArray\\MyPriorityQueue.cs",
@@ -296,7 +439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "MyAVLTree\u00601.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\MyAVLTree\u00601.cs",
               "RelativeDocumentMoniker": "DynamicArray\\MyAVLTree\u00601.cs",
@@ -308,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "MyQueue\u00601.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\MyQueue\u00601.cs",
               "RelativeDocumentMoniker": "DynamicArray\\MyQueue\u00601.cs",
@@ -320,7 +463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "MyStack\u00601.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\MyStack\u00601.cs",
               "RelativeDocumentMoniker": "DynamicArray\\MyStack\u00601.cs",
@@ -332,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "MyLinkedList\u00601.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\MyLinkedList\u00601.cs",
               "RelativeDocumentMoniker": "DynamicArray\\MyLinkedList\u00601.cs",
@@ -344,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 34,
               "Title": "MyDynamicArray.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\MyDynamicArray.cs",
               "RelativeDocumentMoniker": "DynamicArray\\MyDynamicArray.cs",
@@ -356,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 29,
               "Title": "Enumeration.csproj",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\Enumeration\\Enumeration.csproj",
               "RelativeDocumentMoniker": "Enumeration\\Enumeration.csproj",
@@ -368,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\ETL_Unity11\\CSharpBasic\\ArrayConcept\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\ETL_Unity11\\CSharpBasic\\ArrayConcept\\Program.cs",
@@ -379,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 30,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\Enumeration\\Program.cs",
               "RelativeDocumentMoniker": "Enumeration\\Program.cs",
@@ -391,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 28,
               "Title": "Collections.csproj",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\DynamicArray\\Collections.csproj",
               "RelativeDocumentMoniker": "DynamicArray\\Collections.csproj",
@@ -403,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 32,
               "Title": "Content.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SubscribeExample\\Content.cs",
               "RelativeDocumentMoniker": "SubscribeExample\\Content.cs",
@@ -415,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SubscribeExample\\Program.cs",
               "RelativeDocumentMoniker": "SubscribeExample\\Program.cs",
@@ -427,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 31,
               "Title": "Youtuber.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\CSharpBasic\\SubscribeExample\\Youtuber.cs",
               "RelativeDocumentMoniker": "SubscribeExample\\Youtuber.cs",
