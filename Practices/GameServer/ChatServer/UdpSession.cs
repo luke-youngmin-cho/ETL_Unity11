@@ -1,3 +1,4 @@
+using System.Buffers;
 using System.Net;
 using System.Net.Sockets;
 
@@ -7,40 +8,100 @@ namespace ChatServer
      * Session : 소통에 필요한 정보들을 유지하고있는 기간\
      * UDP (User Datagram Protocol) : 데이터 날리고 끝. 검증 없음
      */
-    public class UdpSession
+    public abstract class UdpSession
     {
-        public UdpSession(int port)
+        public UdpSession()
         {
-            _socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            _localEndPoint = new IPEndPoint(IPAddress.Any, port);
-            _socket.Bind(_localEndPoint);
+            SendQueue = new Queue<(ArraySegment<byte> segment, EndPoint remoteEndPoint)>(200);
+            BufferPool = ArrayPool<byte>.Shared;
         }
 
 
-        Socket _socket;
-        IPEndPoint _localEndPoint;
-        bool _isRunning;
-        Task _receiveTask;
-        const int MB = 1_024;
+        public bool IsRunning { get; protected set; }
+
+        protected Socket Socket;
+        protected Task SendTask;
+        protected Task ReceiveTask;
+        protected const int KB = 1_024;
+        protected Queue<(ArraySegment<byte> segment, EndPoint remoteEndPoint)> SendQueue;
+        protected readonly ArrayPool<byte> BufferPool;
 
 
         public void Start()
         {
-            _isRunning = true;
-            _receiveTask = Task.Run(ReceiveLoopAsync);
+            IsRunning = true;
+            SendTask = Task.Run(SendLoopAsync);
+            ReceiveTask = Task.Run(ReceiveLoopAsync);
+        }
+
+        public void Stop()
+        {
+            IsRunning = false;
+            Socket.Close();
+            Socket.Dispose();
+        }
+
+        void Send(IPayload packet, EndPoint remoteEndPoint)
+        {
+            int estimatedSize = 1 * KB;
+            byte[] buffer = BufferPool.Rent(estimatedSize);
+
+            try
+            {
+                using (MemoryStream stream = new MemoryStream(buffer, 0, buffer.Length, true))
+                using (BinaryWriter writer = new BinaryWriter(stream))
+                {
+                    writer.Write((ushort)packet.PayloadType);
+                    packet.Serialize(writer);
+                    int bytesWritten = (int)stream.Position;
+                    ArraySegment<byte> segment = new ArraySegment<byte>(buffer, 0, bytesWritten);
+                    SendQueue.Enqueue((segment, remoteEndPoint));
+                    Console.WriteLine($"[UCP Session] send to {Socket.RemoteEndPoint}. total {bytesWritten} bytes.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        async Task SendLoopAsync()
+        {
+            while (IsRunning)
+            {
+                try
+                {
+                    while(SendQueue.TryDequeue(out (ArraySegment<byte> segment, EndPoint remoteEndPoint) segmentPair))
+                    {
+                        try
+                        {
+                            int bytesSent = await Socket.SendToAsync(segmentPair.segment, segmentPair.remoteEndPoint);
+                            Console.WriteLine($"[UCP Session] : Sent data length of {bytesSent}.");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"[UCP Session] : Failed to send data.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // todo -> Catch socket errors
+                }
+            }
         }
 
         async Task ReceiveLoopAsync()
         {
-            byte[] buffer = new byte[1 * MB];
+            byte[] buffer = new byte[1 * KB];
 
-            while (_isRunning)
+            while (IsRunning)
             {
                 EndPoint senderEndPoint = new IPEndPoint(IPAddress.Any, 0); // IPv4 형식
 
                 try
                 {
-                    SocketReceiveFromResult result = await _socket.ReceiveFromAsync(new ArraySegment<byte>(buffer), senderEndPoint);
+                    SocketReceiveFromResult result = await Socket.ReceiveFromAsync(new ArraySegment<byte>(buffer), senderEndPoint);
 
                     int bytesRead = result.ReceivedBytes;
                     senderEndPoint = result.RemoteEndPoint;
