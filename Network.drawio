@@ -155,11 +155,11 @@
         <mxCell id="A1vHnVPncBVvCbcrfG4D-48" value="Frame" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="588" y="440" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4YhyMdetQOA3Sfs9CboO-0" value="payload" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="4YhyMdetQOA3Sfs9CboO-0" value="payload" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1050" y="340" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4YhyMdetQOA3Sfs9CboO-1" value="datagram : header + payload" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1110" y="340" width="170" height="30" as="geometry" />
+        <mxCell id="4YhyMdetQOA3Sfs9CboO-1" value="datagram : header + payload" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="740" y="250" width="170" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -16,6 +16,8 @@ namespace ChatServer
             }
         }
 
+        public IEnumerable<int> ClientIds => _idSet;
+
 
         readonly HashSet<int> _idSet;
         readonly Queue<int> _availableIdQueue;

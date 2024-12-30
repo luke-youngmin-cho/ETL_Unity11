@@ -1,7 +1,8 @@
+using System;
 using System.Buffers;
 using System.Net;
 using System.Net.Sockets;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Reflection.PortableExecutable;
 
 namespace ChatServer
 {
@@ -16,6 +17,10 @@ namespace ChatServer
         {
             SendQueue = new Queue<ArraySegment<byte>>(20);
             BufferPool = ArrayPool<byte>.Shared;
+            SendStream = new MemoryStream(64 * KB);
+            SendStreamWriter = new BinaryReader(SendStream);
+            ReceiveStream = new MemoryStream(64 * KB);
+            ReceiveStreamReader = new BinaryReader(ReceiveStream);
         }
 
 
@@ -27,6 +32,10 @@ namespace ChatServer
         protected const int KB = 1_024;
         protected readonly Queue<ArraySegment<byte>> SendQueue;
         protected readonly ArrayPool<byte> BufferPool;
+        protected MemoryStream SendStream;
+        protected BinaryReader SendStreamWriter;
+        protected MemoryStream ReceiveStream;
+        protected BinaryReader ReceiveStreamReader;
 
         public event Action OnConnected;
         public event Action OnDisconnected;
@@ -67,7 +76,7 @@ namespace ChatServer
             Console.WriteLine($"[TCP Session] Disconnected.");
         }
 
-        public void Send(IPayload packet)
+        public void Send(IPayload payload)
         {
             if (!IsConnected)
             {
@@ -88,30 +97,47 @@ namespace ChatServer
 
             try
             {
-                using (MemoryStream stream = new MemoryStream(buffer, 0, buffer.Length, true))
-                using (BinaryWriter writer = new BinaryWriter(stream))
+                byte[] entireData = Serialize(payload);
+                int offset = 0;
+                int entireLength = entireData.Length;
+
+                while (offset < entireLength)
                 {
-                    writer.Write((ushort)packet.PayloadType); // 패킷 타입 쓰기
-                    writer.Write(0); // Payload 길이. 일단 임의의 정수를 할당하고, 이후에 계산해서 실제 길이 넣을거임.
-                    long payloadStartPosition = stream.Position; // 실제 데이터 시작위치
-                    packet.Serialize(writer);
-                    long payloadEndPosition = stream.Position; // 실제 데이터 끝위치
-                    long payloadLength = payloadEndPosition - payloadStartPosition; // 실제데이터 길이
-                    stream.Position = sizeof(ushort); // 패킷타입 뒤로 이동
-                    writer.Write(payloadLength); // Payload 길이 덮어씀.
-                    stream.Position = payloadEndPosition;
-                    int bytesWritten = (int)stream.Position; // 총 Segment 길이
-                    ArraySegment<byte> segment = new ArraySegment<byte>(buffer, 0, bytesWritten);
+                    int chunkSize = Math.Min(1 * KB, entireLength - offset);
+                    byte[] chunk = BufferPool.Rent(chunkSize);
+                    Buffer.BlockCopy(entireData, offset, chunk, 0, chunkSize);
+
+                    ArraySegment<byte> segment = new ArraySegment<byte>(chunk);
                     SendQueue.Enqueue(segment);
-                    Console.WriteLine($"[TCP Session] send to {Socket.RemoteEndPoint}. total {bytesWritten} bytes.");
+                    offset += chunkSize;
                 }
+
+                _ = SendLoopAsync();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
 
-            _ = SendLoopAsync();
+            
+        }
+
+        byte[] Serialize(IPayload payload)
+        {
+            using (MemoryStream stream = new MemoryStream())
+            using (BinaryWriter writer = new BinaryWriter(stream))
+            {
+                writer.Write((ushort)payload.PayloadType); // 패킷 타입 쓰기
+                writer.Write(0); // Payload 길이. 일단 임의의 정수를 할당하고, 이후에 계산해서 실제 길이 넣을거임.
+                long payloadStartPosition = stream.Position; // 실제 데이터 시작위치
+                payload.Serialize(writer);
+                long payloadEndPosition = stream.Position; // 실제 데이터 끝위치
+                long payloadLength = payloadEndPosition - payloadStartPosition; // 실제데이터 길이
+                stream.Position = sizeof(ushort); // 패킷타입 뒤로 이동
+                writer.Write(payloadLength); // Payload 길이 덮어씀.
+
+                return stream.ToArray();
+            }
         }
 
         async Task SendLoopAsync()
@@ -122,6 +148,8 @@ namespace ChatServer
                 {
                     int bytesSent = await Socket.SendAsync(segment);
                     Console.WriteLine($"[TCP Session] : Sent data length of {bytesSent}.");
+
+                    BufferPool.Return(segment.Array);
                 }
                 catch (Exception ex)
                 {
@@ -143,11 +171,42 @@ namespace ChatServer
                     int bytesRead = await Socket.ReceiveAsync(new ArraySegment<byte>(buffer));
 
                     // 유효한 데이터 안들어왔으면 연결 끊어진것으로 간주
-                    if (bytesRead <= 0)
+                    if (bytesRead == 0)
                     {
                         Console.WriteLine($"[TCP Session] Remote host closed the connection.");
                         Disconnect();
                         break;
+                    }
+
+                    ReceiveStream.Seek(0, SeekOrigin.End); // Segment 누적을위해서 가장 끝으로이동
+                    ReceiveStream.Write(buffer, 0, bytesRead);
+                    ReceiveStream.Seek(0, SeekOrigin.Begin); // 전체 Payload 파싱이 가능한지 확인하기위해서 가장 앞으로이동
+
+                    while (true)
+                    {
+                        if (ReceiveStream.Length - ReceiveStream.Position < sizeof(PayloadType) + sizeof(int))
+                            break;
+
+                        PayloadType payloadType = (PayloadType)ReceiveStreamReader.ReadUInt16();
+                        int payloadLength = ReceiveStreamReader.ReadInt32();
+
+                        // 아직 Payload 전체가 도착하지 않았다면 다음 세그먼트 수신 대기하러가야함
+                        if (ReceiveStream.Length - ReceiveStream.Position < payloadLength)
+                        {
+                            ReceiveStream.Seek(0, SeekOrigin.Begin);
+                            break;
+                        }
+
+                        IPayload payload = PayloadFactory.Create(payloadType);
+
+                        if (payload == null)
+                        {
+                            Console.WriteLine($"[{nameof(TcpSession)}] Invalid payloadType {payloadType}.");
+                            break;
+                        }
+
+                        payload.Deserialize(ReceiveStreamReader);
+                        HandlePayload(payload);
                     }
 
                     string receivedData = System.Text.Encoding.UTF8.GetString(buffer, 0, bytesRead);
@@ -163,5 +222,11 @@ namespace ChatServer
                 }
             }
         }
+
+        /// <summary>
+        /// 수신받은 데이터를 처리
+        /// </summary>
+        /// <param name="payload"> 수신받은 데이터 </param>
+        protected abstract void HandlePayload(IPayload payload);
     }
 }
