@@ -8,7 +8,7 @@ namespace Practices.GameClient.Network.Client
         /// <summary>
         /// 
         /// </summary>
-        [RuntimeInitializeOnLoadMethod] // 처음 어플리케이션 시작시 호출
+        //[RuntimeInitializeOnLoadMethod] // 처음 어플리케이션 시작시 호출
         public static void Start()
         {
             DebugLogger.Log("Client start");
