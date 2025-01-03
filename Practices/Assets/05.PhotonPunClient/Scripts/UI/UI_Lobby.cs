@@ -17,13 +17,14 @@ namespace Practices.PhotonPunClient.UI
         [Resolve] Button _joinRoom;
         List<RoomListSlot> _roomListSlots = new List<RoomListSlot>(10);
         List<RoomInfo> _roomInfosCached = new List<RoomInfo>(10);
-        int _roomIdSelected;
+        int _roomIdSelected = -1;
 
 
         protected override void Start()
         {
             base.Start();
 
+            _roomListSlot.gameObject.SetActive(false);
             playerInputActions.UI.Click.performed += OnClick;
             _createRoom.onClick.AddListener(() =>
             {
@@ -31,6 +32,7 @@ namespace Practices.PhotonPunClient.UI
                 createRoomOption.Show();
             });
 
+            _joinRoom.interactable = false;
             _joinRoom.onClick.AddListener(() =>
             {
                 UI_ConfirmWindow confirmWindow = UI_Manager.instance.Resolve<UI_ConfirmWindow>();
@@ -92,6 +94,7 @@ namespace Practices.PhotonPunClient.UI
             RoomListSlot slotSelected = _roomListSlots.Find(slot => slot.roomId == _roomIdSelected);
             string selectedRoomName = slotSelected?.name;
             _joinRoom.interactable = false;
+            _roomIdSelected = -1;
 
             // TODO: Pooling slots.
             for (int i = 0; i < _roomListSlots.Count; i++)
@@ -105,10 +108,12 @@ namespace Practices.PhotonPunClient.UI
             for (int i = 0; i < roomList.Count; i++)
             {
                 RoomListSlot slot = Instantiate(_roomListSlot, _roomListSlotContent);
+                slot.gameObject.SetActive(true);
                 slot.roomId = i;
                 slot.roomName = roomList[i].Name;
                 slot.roomPlayerCount = roomList[i].PlayerCount;
                 slot.roomMaxPlayers = roomList[i].MaxPlayers;
+                slot.gameObject.SetActive((roomList[i].RemovedFromList == false) && (roomList[i].PlayerCount > 0));
                 _roomListSlots.Add(slot);
                 _roomInfosCached.Add(roomList[i]);
 
@@ -130,8 +135,6 @@ namespace Practices.PhotonPunClient.UI
 
         void SelectRoom(int roomId)
         {
-            UI_ConfirmWindow confirmWindow = UI_Manager.instance.Resolve<UI_ConfirmWindow>();
-
             RoomInfo roomInfo = _roomInfosCached[roomId];
 
             if (!roomInfo.IsOpen)
@@ -147,6 +150,12 @@ namespace Practices.PhotonPunClient.UI
             }
 
             _joinRoom.interactable = true;
+
+            if (_roomIdSelected >= 0)
+                _roomListSlots[_roomIdSelected].isSelected = false;
+
+            _roomListSlots[roomId].isSelected = true;
+            _roomIdSelected = roomId;
         }
 
         public void OnFriendListUpdate(List<FriendInfo> friendList)
@@ -159,11 +168,19 @@ namespace Practices.PhotonPunClient.UI
 
         public void OnCreateRoomFailed(short returnCode, string message)
         {
+            UI_ConfirmWindow confirmWindow = UI_Manager.instance.Resolve<UI_ConfirmWindow>();
+            confirmWindow.Show(message);
         }
 
         public void OnJoinedRoom()
         {
-            // TODO: Show Room UI
+            PhotonNetwork.LocalPlayer.SetCustomProperties(new ExitGames.Client.Photon.Hashtable
+            {
+                { PlayerInRoomPropertyKey.IS_READY, false },
+            });
+
+            UI_Manager.instance.Resolve<UI_Room>()
+                               .Show();
         }
 
         public void OnJoinRoomFailed(short returnCode, string message)
@@ -180,6 +197,7 @@ namespace Practices.PhotonPunClient.UI
 
         public void OnLeftRoom()
         {
+            Show();
         }
     }
 }

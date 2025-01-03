@@ -41,11 +41,19 @@ namespace Practices.PhotonPunClient.UI
             {
                 RoomOptions roomOptions = new RoomOptions();
                 roomOptions.MaxPlayers = int.Parse(_roomMaxPlayers.text);
-
                 PhotonNetwork.CreateRoom(_roomName.text, roomOptions);
+                Hide();
             });
 
             _cancel.onClick.AddListener(Hide);
+        }
+
+        public override void Show()
+        {
+            base.Show();
+
+            _roomName.text = string.Empty;
+            _roomMaxPlayers.text = ROOM_MAX_PLAYERS_LIMIT_MIN.ToString();
         }
     }
 }

@@ -2,11 +2,22 @@ using UnityEngine;
 using Practices.UGUI_Management.UI;
 using Practices.UGUI_Management.Utilities;
 using TMPro;
+using UnityEngine.UI;
 
 namespace Practices.PhotonPunClient.UI
 {
     public class RoomListSlot : ComponentResolvingBehaviour
     {
+        public bool isSelected
+        {
+            get => _isSelectedValue;
+            set
+            {
+                _isSelectedValue = value;
+                _isSelected.gameObject.SetActive(value);
+            }
+        }
+
         public int roomId
         {
             get => _roomIdValue;
@@ -47,11 +58,12 @@ namespace Practices.PhotonPunClient.UI
             }
         }
 
-
+        bool _isSelectedValue;
         int _roomIdValue;
         string _roomNameValue;
         int _roomPlayerCountValue;
         int _roomMaxPlayersValue;
+        [Resolve] Image _isSelected;
         [Resolve] TMP_Text _roomId;
         [Resolve] TMP_Text _roomName;
         [Resolve] TMP_Text _roomPlayerCount;

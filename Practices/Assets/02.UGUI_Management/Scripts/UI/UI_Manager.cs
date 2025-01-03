@@ -65,10 +65,13 @@ namespace Practices.UGUI_Management.UI
             // 이미 활성화된 스크린 UI 가 있으면 끔
             if (_screen != null)
             {
+                _screen.inputActionsEnabled = false;
                 _screen.Hide();
             }
 
             _screen = screen;
+            _screen.sortingOrder = 0;
+            _screen.inputActionsEnabled = true;
         }
 
         public void Push(UI_Popup popup)
@@ -81,7 +84,7 @@ namespace Practices.UGUI_Management.UI
                 _popupStack.RemoveAt(popupIndex);
             }
 
-            int sortingOrder = 0;
+            int sortingOrder = 1;
 
             if (_popupStack.Count > 0)
             {

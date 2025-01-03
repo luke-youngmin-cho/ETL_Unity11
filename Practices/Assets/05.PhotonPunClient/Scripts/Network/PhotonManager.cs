@@ -45,8 +45,8 @@ namespace Practices.PhotonPunClient.Network
         public override void OnConnectedToMaster()
         {
             base.OnConnectedToMaster();
-
-            // PhotonNetwork.AutomaticallySyncScene // 현재 속해있는 방의 방장이 씬을 전환하면 따라서 전환하는 옵션
+            
+            PhotonNetwork.AutomaticallySyncScene = true; // 현재 속해있는 방의 방장이 씬을 전환하면 따라서 전환하는 옵션
             // PhotonNetwork.NickName
             Debug.Log($"[{nameof(PhotonManager)}] Connected to master server.");
             PhotonNetwork.JoinLobby();
