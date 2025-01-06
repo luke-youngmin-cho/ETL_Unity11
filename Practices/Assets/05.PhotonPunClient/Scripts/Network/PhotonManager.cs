@@ -35,6 +35,12 @@ namespace Practices.PhotonPunClient.Network
 
             if (PhotonNetwork.IsConnected == false)
             {
+#if UNITY_EDITOR
+                PhotonNetwork.LogLevel = PunLogLevel.Full;
+                Application.runInBackground = true;
+#endif
+                PhotonNetwork.AuthValues = new Photon.Realtime.AuthenticationValues(Random.Range(0, 999999999).ToString());
+                PhotonNetwork.NickName = Random.Range(0, 999999999).ToString();
                 bool isConnected = PhotonNetwork.ConnectUsingSettings();
                 Debug.Assert(isConnected, $"[{nameof(PhotonManager)}] Failed to connect to photon pun server.");
             }

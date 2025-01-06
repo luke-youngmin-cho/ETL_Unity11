@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\GameServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{39E9DBC2-CDEA-4A39-A092-B5940A30039E}|ChatServer\\ChatServer.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\gameserver\\chatserver\\network\\server\\serversessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39E9DBC2-CDEA-4A39-A092-B5940A30039E}|ChatServer\\ChatServer.csproj|solutionrelative:chatserver\\network\\server\\serversessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{39E9DBC2-CDEA-4A39-A092-B5940A30039E}|ChatServer\\ChatServer.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\gameserver\\chatserver\\network\\tcpsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39E9DBC2-CDEA-4A39-A092-B5940A30039E}|ChatServer\\ChatServer.csproj|solutionrelative:chatserver\\network\\tcpsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{39E9DBC2-CDEA-4A39-A092-B5940A30039E}|ChatServer\\ChatServer.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\gameserver\\chatserver\\network\\server\\clientidgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39E9DBC2-CDEA-4A39-A092-B5940A30039E}|ChatServer\\ChatServer.csproj|solutionrelative:chatserver\\network\\server\\clientidgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39E9DBC2-CDEA-4A39-A092-B5940A30039E}|ChatServer\\ChatServer.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\gameserver\\chatserver\\network\\server\\serversessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39E9DBC2-CDEA-4A39-A092-B5940A30039E}|ChatServer\\ChatServer.csproj|solutionrelative:chatserver\\network\\server\\serversessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39E9DBC2-CDEA-4A39-A092-B5940A30039E}|ChatServer\\ChatServer.csproj|c:\\users\\user\\documents\\github\\etl_unity11\\gameserver\\chatserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 191,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UdpSession.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\GameServer\\ChatServer\\Network\\UdpSession.cs",
               "RelativeDocumentMoniker": "ChatServer\\Network\\UdpSession.cs",
@@ -58,12 +58,11 @@
               "RelativeToolTip": "ChatServer\\Network\\UdpSession.cs",
               "ViewState": "AQIAAIUAAAAAAAAAAABBwJEAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T04:14:30.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-31T04:14:30.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Messages.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\GameServer\\ChatServer\\Network\\Messages.cs",
               "RelativeDocumentMoniker": "ChatServer\\Network\\Messages.cs",
@@ -71,12 +70,11 @@
               "RelativeToolTip": "ChatServer\\Network\\Messages.cs",
               "ViewState": "AQIAAE4AAAAAAAAAAEBEwFEAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T00:59:27.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-31T00:59:27.915Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ClientIdGenerator.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\GameServer\\ChatServer\\Network\\Server\\ClientIdGenerator.cs",
               "RelativeDocumentMoniker": "ChatServer\\Network\\Server\\ClientIdGenerator.cs",
@@ -84,8 +82,7 @@
               "RelativeToolTip": "ChatServer\\Network\\Server\\ClientIdGenerator.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAAABwAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T04:51:00.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T04:51:00.664Z"
             },
             {
               "$type": "Document",
@@ -101,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TcpSession.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\GameServer\\ChatServer\\Network\\TcpSession.cs",
               "RelativeDocumentMoniker": "ChatServer\\Network\\TcpSession.cs",
@@ -126,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ServerTcpSession.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\GameServer\\ChatServer\\Network\\Server\\ServerTcpSession.cs",
               "RelativeDocumentMoniker": "ChatServer\\Network\\Server\\ServerTcpSession.cs",
@@ -134,18 +131,17 @@
               "RelativeToolTip": "ChatServer\\Network\\Server\\ServerTcpSession.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAA3wAUAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T04:21:24.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T04:21:24.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "ServerSessionManager.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\GameServer\\ChatServer\\Network\\Server\\ServerSessionManager.cs",
               "RelativeDocumentMoniker": "ChatServer\\Network\\Server\\ServerSessionManager.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\ETL_Unity11\\GameServer\\ChatServer\\Network\\Server\\ServerSessionManager.cs",
               "RelativeToolTip": "ChatServer\\Network\\Server\\ServerSessionManager.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAIA8wDUAAAAqAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAAA3wHoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T00:54:07.973Z",
               "EditorCaption": ""
