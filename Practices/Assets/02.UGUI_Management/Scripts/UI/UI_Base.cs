@@ -69,6 +69,11 @@ namespace Practices.UGUI_Management.UI
             onHide?.Invoke();
         }
 
+        private void OnDestroy()
+        {
+            manager.Unregister(this);
+        }
+
         /// <summary>
         /// 현재 Canvas 에 특정 컴포넌트가 존재하는지 탐색
         /// </summary>

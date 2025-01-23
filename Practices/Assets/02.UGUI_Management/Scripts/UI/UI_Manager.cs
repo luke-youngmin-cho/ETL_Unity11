@@ -41,6 +41,17 @@ namespace Practices.UGUI_Management.UI
             }
         }
 
+        public void Unregister(UI_Base ui)
+        {
+            if (_uis.Remove(ui.GetType()))
+            {
+                if (ui is UI_Popup)
+                {
+                    Pop((UI_Popup)ui);
+                }
+            }
+        }
+
         public T Resolve<T>()
             where T : UI_Base
         {
@@ -104,7 +115,7 @@ namespace Practices.UGUI_Management.UI
             int popupIndex = _popupStack.FindLastIndex(ui => ui == popup);
 
             if (popupIndex < 0)
-                throw new Exception($"Failed to remove popup. {popup.name}");
+                return;
 
             // 빼려는게 마지막이었으면 이전꺼를 활성화
             if (popupIndex == _popupStack.Count - 1)
